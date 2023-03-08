@@ -74,26 +74,4 @@ class ProductManager {
   }
 }
 
-const productManager = new ProductManager("Products.json");
-
-// Para agregar un producto
-productManager.addProduct({
-  title: "Placa de video",
-  description: "RTX 4090",
-  price: 899.99,
-  thumbnail: "img/rtx_4090.jpg",
-  code: "PV001",
-  stock: 4,
-});
-
-const products = productManager.loadProducts(); // Para Obtener todos los productos
-console.log(products);
-
-const productById = productManager.getProductById(1); // Por ID
-console.log(productById);
-
-productManager.updateProduct(2, { price: 1500.99 }); // Actualizar un producto de la lista
-
-productManager.deleteProduct(0); // Eliminar un producto
-
 module.exports = ProductManager;
